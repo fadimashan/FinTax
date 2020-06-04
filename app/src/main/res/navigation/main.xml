@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/catListFragment">
+    <fragment
+        android:id="@+id/catListFragment"
+        android:name="se.mobileinteraction.baseproject.ui.list.CatListFragment"
+        android:label="@string/list_title"
+        tools:layout="@layout/fragment_cat_list">
+        <action
+            android:id="@+id/action_catListFragment_to_catDetailFragment"
+            app:destination="@id/catDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/catDetailFragment"
+        android:name="se.mobileinteraction.baseproject.ui.detail.CatDetailFragment"
+        android:label="@string/details_title"
+        tools:layout="@layout/fragment_cat_detail">
+        <argument
+            android:name="catId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteCatsFragment"
+        android:name="se.mobileinteraction.baseproject.ui.favourites.FavouriteCatsFragment"
+        android:label="@string/favourites_title"
+        tools:layout="@layout/fragment_favourite_cats">
+        <action
+            android:id="@+id/action_favouriteCatsFragment_to_catDetailFragment"
+            app:destination="@id/catDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="se.mobileinteraction.baseproject.ui.AboutFragment"
+        android:label="@string/about_title"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_aboutFragment_to_licencesMenu"
+            app:destination="@id/licencesMenu" />
+    </fragment>
+    <activity
+        android:id="@+id/licencesMenu"
+        android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+        android:label="@string/open_source_licenses_title" />
+
+</navigation>

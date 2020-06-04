@@ -1,0 +1,4 @@
+<lint>
+    <issue id="UnusedIds" severity="ignore" />
+    <issue id="all" severity="error" />
+</lint>

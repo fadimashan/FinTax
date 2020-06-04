@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="alphaEmphasisHigh" format="float" />
+    <attr name="alphaEmphasisMedium" format="float" />
+    <attr name="alphaEmphasisDisabled" format="float" />
+
+    <declare-styleable name="CatGridItemView">
+        <attr name="imageUrl" format="string" />
+        <attr name="currentlySelected" format="boolean" />
+        <attr name="favourite" format="boolean" />
+    </declare-styleable>
+</resources>
