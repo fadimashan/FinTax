@@ -1,4 +1,0 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="api_key" tools:ignore="TypographyDashes">62817fb4-7339-429c-9a2d-113855a5917e</string>
-    <string name="cats_api_base">https://api.thecatapi.com/v1/</string>
-</resources>

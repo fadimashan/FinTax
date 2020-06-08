@@ -1,6 +1,6 @@
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
+//apply(plugin = "com.google.android.gms.oss-licenses-plugin")
+apply(plugin = "com.android.application")
 
-apply(plugin = "com.google.android.gms.oss-licenses-plugin")
 
 plugins {
     id("com.android.application")
@@ -8,6 +8,8 @@ plugins {
     kotlin("android.extensions")
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
 }
 
 android {
@@ -19,7 +21,10 @@ android {
         targetSdkVersion(Android.targetSdk)
         versionCode = Android.versionCode
         versionName = Android.versionName
-        testInstrumentationRunner = Android.testRunner
+        testInstrumentationRunner
+        testOptions {
+            animationsDisabled = true
+        }
     }
 
 
@@ -83,10 +88,8 @@ android {
 
     applicationVariants.all {
         val lintTask = tasks["lint${name.capitalize()}"]
-        val detektTask = tasks["detekt"]
         assembleProvider?.get()?.run {
             dependsOn += lintTask
-            dependsOn += detektTask
         }
     }
 
@@ -111,17 +114,20 @@ android {
 
 
 dependencies {
-    implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
+    implementation(kotlin("stdlib", org.jetbrains.kotlin.config.KotlinCompilerVersion.VERSION))
     implementation(Deps.appCompat)
     implementation(Deps.constraintLayout)
     implementation(Deps.material)
+    implementation(Deps.design)
 
     implementation(Deps.okHttp)
     implementation(Deps.retrofit)
-    implementation(Deps.retrofitGson)
+    implementation(Deps.retrofitMoshi)
     implementation(Deps.retrofitRx)
-
     implementation(Deps.glide)
+    implementation(Deps.legacy)
+    implementation(Deps.lifecycleExtensions)
+    implementation(Deps.lifecycleViewModel)
     kapt(Deps.glideAnnotation)
 
     implementation(Deps.httpLogger)
@@ -130,6 +136,7 @@ dependencies {
     implementation(Deps.archLifecycle)
     implementation(Deps.navigationFragment)
     implementation(Deps.navigationUi)
+    implementation(Deps.karumiDexter)
 
     implementation(Deps.rxJava)
     implementation(Deps.rxKotlin)
@@ -137,9 +144,20 @@ dependencies {
 
     implementation(Deps.koin)
     implementation(Deps.koinViewModel)
+    implementation(Deps.koinScope)
+    implementation(Deps.koinFragment)
+
 
     implementation(Deps.timber)
     implementation(Deps.androidOss)
+
+    implementation(Deps.paging)
+    implementation(Deps.pagingrx)
+    implementation(Deps.permissions)
+    implementation(Deps.legacyPre)
+
+
+    //>>>>>>>>>>>>>>
 
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
@@ -149,7 +167,12 @@ dependencies {
     testImplementation(Deps.expekt)
 
     androidTestImplementation(Deps.espresso)
-
     androidTestImplementation(Deps.testCore)
     androidTestImplementation(Deps.testRunner)
+    androidTestImplementation(Deps.androidTestRule)
+    androidTestImplementation(Deps.androidMockk)
+
+
+
+
 }
