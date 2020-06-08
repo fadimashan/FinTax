@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "444220935656",
+    "firebase_url": "https://fintaxkotlin.firebaseio.com",
+    "project_id": "fintaxkotlin",
+    "storage_bucket": "fintaxkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444220935656:android:dfaa411aa17fb2b31fa85d",
+        "android_client_info": {
+          "package_name": "se.mobileinteraction.plain.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444220935656-ersfdgucmsh0djgei8faovgb8duj0h6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "se.mobileinteraction.plain.dev",
+            "certificate_hash": "addde37f9017afec759aeab5c0942a45a3363aff"
+          }
+        },
+        {
+          "client_id": "444220935656-8fos0vm2qqdhg9akogpb9bn1kksq55nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBokct4aQ9FzE064uWAFbTYKNCTDjJd-h0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444220935656-8fos0vm2qqdhg9akogpb9bn1kksq55nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

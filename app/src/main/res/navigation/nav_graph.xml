@@ -3,27 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_host_fragment"
-    tools:ignore="UnusedNavigation">
+    app:startDestination="@+id/loginFragment">
 
     <fragment
         android:id="@+id/nav_host_fragment"
-        android:name="com.mashan.fintax.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.mashan.fintax.ui.homePage.HomePageFragment"
+        tools:layout="@layout/home_page_fragment"/>
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.mashan.fintax.ui.login.SplashFragment"
+        app:launchSingleTop="true"
+        android:label="SplashFragment" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_splashFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.mashan.fintax.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/loginFragment"
+        android:name="com.mashan.fintax.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_loginFragment_to_nav_host_fragment"
             app:destination="@id/nav_host_fragment" />
     </fragment>
 </navigation>

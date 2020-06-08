@@ -1,5 +1,6 @@
 //apply(plugin = "com.google.android.gms.oss-licenses-plugin")
 apply(plugin = "com.android.application")
+apply(plugin = "com.google.gms.google-services")
 
 
 plugins {
@@ -128,9 +129,20 @@ dependencies {
     implementation(Deps.legacy)
     implementation(Deps.lifecycleExtensions)
     implementation(Deps.lifecycleViewModel)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
     kapt(Deps.glideAnnotation)
 
     implementation(Deps.httpLogger)
+    implementation("com.google.firebase:firebase-analytics:17.4.3")
+    implementation("com.google.firebase:firebase-auth:19.3.1")
+    implementation("com.google.firebase:firebase-core:17.4.3")
+    implementation("com.google.firebase:firebase-messaging:20.2.0")
+    implementation("com.firebaseui:firebase-ui-auth:4.3.1")
+    implementation("com.facebook.android:facebook-android-sdk:5.15.0")
+    implementation ("com.facebook.android:facebook-login:5.15.0")
+
 
     implementation(Deps.androidxCompat)
     implementation(Deps.archLifecycle)
