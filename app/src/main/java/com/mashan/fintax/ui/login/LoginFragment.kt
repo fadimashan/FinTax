@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.firebase.ui.auth.AuthUI
@@ -21,11 +22,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         provider = listOf(
             AuthUI.IdpConfig.EmailBuilder().build(),
             AuthUI.IdpConfig.FacebookBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build()
-//            AuthUI.IdpConfig.PhoneBuilder().build()
         )
 
         showSignInOptions()
@@ -49,6 +50,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+
+        requireActivity().window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -75,6 +82,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             AuthUI.getInstance().createSignInIntentBuilder()
                 .setAvailableProviders(provider)
                 .setTheme(R.style.MyTheme)
+                .setLogo(R.drawable.logo_fintax)
                 .build(), MY_REQUEST_CODE
 
         )

@@ -132,16 +132,28 @@ dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation("com.google.android.material:material:1.2.1")
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
+    implementation("androidx.navigation:navigation-fragment:2.3.1")
+    implementation("androidx.navigation:navigation-ui:2.3.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
+    implementation("androidx.mediarouter:mediarouter:1.2.0")
+    implementation("com.simplemobiletools:commons:5.18.13")
+
     kapt(Deps.glideAnnotation)
 
     implementation(Deps.httpLogger)
-    implementation("com.google.firebase:firebase-analytics:17.4.3")
-    implementation("com.google.firebase:firebase-auth:19.3.1")
-    implementation("com.google.firebase:firebase-core:17.4.3")
-    implementation("com.google.firebase:firebase-messaging:20.2.0")
+    implementation("com.google.firebase:firebase-analytics:17.6.0")
+    implementation("com.google.firebase:firebase-auth:19.4.0")
+    implementation("com.google.firebase:firebase-core:17.5.1")
+    implementation("com.google.firebase:firebase-messaging:20.3.0")
+    implementation("com.google.firebase:firebase-database:19.5.1")
     implementation("com.firebaseui:firebase-ui-auth:4.3.1")
-    implementation("com.facebook.android:facebook-android-sdk:5.15.0")
-    implementation ("com.facebook.android:facebook-login:5.15.0")
+    implementation("com.google.firebase:firebase-bom:25.12.0")
+    implementation("com.facebook.android:facebook-android-sdk:7.0.0")
+    implementation("com.facebook.android:facebook-login:7.0.0")
 
 
     implementation(Deps.androidxCompat)
@@ -167,6 +179,7 @@ dependencies {
     implementation(Deps.pagingrx)
     implementation(Deps.permissions)
     implementation(Deps.legacyPre)
+    implementation(Deps.datePicker)
 
 
     //>>>>>>>>>>>>>>
@@ -183,8 +196,6 @@ dependencies {
     androidTestImplementation(Deps.testRunner)
     androidTestImplementation(Deps.androidTestRule)
     androidTestImplementation(Deps.androidMockk)
-
-
 
 
 }

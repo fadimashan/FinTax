@@ -3,12 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/loginFragment">
+    app:startDestination="@+id/splashFragment">
 
     <fragment
         android:id="@+id/nav_host_fragment"
-        android:name="com.mashan.fintax.ui.homePage.HomePageFragment"
-        tools:layout="@layout/home_page_fragment"/>
+        android:name="com.mashan.fintax.ui.mainPage.MainPageFragment"
+        tools:layout="@layout/home_page_fragment">
+        <action
+            android:id="@+id/action_nav_host_fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_carFragment"
+            app:destination="@id/carFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_salaryFragment"
+            app:destination="@id/salaryFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_percentageFragment"
+            app:destination="@id/percentageFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_houseFragment"
+            app:destination="@id/houseFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashFragment"
@@ -31,4 +53,61 @@
             android:id="@+id/action_loginFragment_to_nav_host_fragment"
             app:destination="@id/nav_host_fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/houseFragment"
+        android:name="com.mashan.fintax.ui.house.HouseFragment"
+        android:label="HouseFragment" >
+        <action
+            android:id="@+id/action_houseFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.mashan.fintax.ui.info.InfoFragment"
+        android:label="InfoFragment" >
+        <action
+            android:id="@+id/action_infoFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/percentageFragment"
+        android:name="com.mashan.fintax.ui.percentage.PercentageFragment"
+        android:label="PercentageFragment" >
+        <action
+            android:id="@+id/action_percentageFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salaryFragment"
+        android:name="com.mashan.fintax.ui.salary.SalaryFragment"
+        android:label="SalaryFragment" >
+        <action
+            android:id="@+id/action_salaryFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+        <action
+            android:id="@+id/action_salaryFragment_to_addNewSalaryFragment"
+            app:destination="@id/addNewSalaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.mashan.fintax.ui.summary.SummaryFragment"
+        android:label="SummaryFragment" >
+        <action
+            android:id="@+id/action_summaryFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.mashan.fintax.ui.car.CarFragment"
+        android:label="fragment_car"
+        tools:layout="@layout/fragment_car" >
+        <action
+            android:id="@+id/action_carFragment_to_nav_host_fragment"
+            app:destination="@id/nav_host_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewSalaryFragment"
+        android:name="com.mashan.fintax.ui.salary.AddNewSalaryFragment"
+        android:label="fragment_add_new_salary"
+        tools:layout="@layout/fragment_add_new_salary" />
 </navigation>

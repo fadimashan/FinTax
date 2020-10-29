@@ -8,17 +8,62 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:444220935656:android:dfaa411aa17fb2b31fa85d",
+        "mobilesdk_app_id": "1:444220935656:android:fa763b0010c703761fa85d",
         "android_client_info": {
-          "package_name": "se.mobileinteraction.plain.dev"
+          "package_name": "com.mashan.fintax"
         }
       },
       "oauth_client": [
         {
-          "client_id": "444220935656-ersfdgucmsh0djgei8faovgb8duj0h6d.apps.googleusercontent.com",
+          "client_id": "444220935656-op82dgjm6n8n8rfuq499brrd1i2l74fp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "se.mobileinteraction.plain.dev",
+            "package_name": "com.mashan.fintax",
+            "certificate_hash": "55d06c6fcffe77300dc797f4e862ba8e4b7b90ac"
+          }
+        },
+        {
+          "client_id": "444220935656-jqe1hnan6d581kdb8ghveigrr22kpr52.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mashan.fintax",
+            "certificate_hash": "addde37f9017afec759aeab5c0942a45a3363aff"
+          }
+        },
+        {
+          "client_id": "444220935656-8fos0vm2qqdhg9akogpb9bn1kksq55nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBokct4aQ9FzE064uWAFbTYKNCTDjJd-h0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444220935656-8fos0vm2qqdhg9akogpb9bn1kksq55nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444220935656:android:13dea29e1ce875821fa85d",
+        "android_client_info": {
+          "package_name": "com.mashan.fintax.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444220935656-3br7vd6782p3lcr11bsha88gjhom703m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mashan.fintax.dev",
             "certificate_hash": "addde37f9017afec759aeab5c0942a45a3363aff"
           }
         },

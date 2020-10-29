@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Plain</string>
+    <string name="app_name">FinTax</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="home_page_fragment_label">Home Page</string>
@@ -9,5 +9,29 @@
     <string name="facebook_application_id" translatable="false">1082256552161439</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb1082256552161439</string>
     <string name="facebook_app_id">1082256552161439</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">FinTax</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="action_car">Car</string>
+    <string name="action_house">House</string>
+    <string name="action_salary">Salary</string>
+    <string name="action_summary">Summary</string>
+    <string name="action_info">Info</string>
+    <string name="action_percentage">Percentage</string>
+    <string name="sign_out">Sign out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_commune">Select Commune</string>
+
+
+    <string name="add_trip">Add New Trip</string>
 
 </resources>

@@ -7,7 +7,6 @@
 
 
 
-
     <ImageView
         android:id="@+id/sign_out"
         android:layout_width="wrap_content"

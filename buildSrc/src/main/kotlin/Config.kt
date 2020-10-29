@@ -35,6 +35,7 @@ object Versions {
     const val espresso = "3.1.0"
     const val mockk = "1.9.3.kotlin12"
     const val expekt = "0.5.0"
+    const val datePicker = "4.2.3"
     const val paging = "2.1.0"
     const val permission = "1.1.1"
 
@@ -103,6 +104,7 @@ object Deps {
     const val archTesting = "androidx.arch.core:core-testing:${Versions.archCoreTesting}"
     const val livedataTesting = "com.jraska.livedata:testing-ktx:${Versions.livedataTesting}"
     const val expekt = "com.winterbe:expekt:${Versions.expekt}"
+    const val datePicker = "com.wdullaer:materialdatetimepicker:${Versions.datePicker}"
 
     const val paging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
     const val pagingrx = "androidx.paging:paging-rxjava2-ktx:${Versions.paging}"
@@ -113,11 +115,12 @@ object Deps {
     const val permissions = "pub.devrel:easypermissions:${Versions.permission}"
     const val androidTestRule = "androidx.test:rules:1.2.0"
     const val androidMockk = "io.mockk:mockk-android:1.9.3"
+    const val firebaseData = "com.google.firebase:firebase-database:16.0.4"
 }
 
 @Suppress("unused")
 object Android {
-    const val applicationId = "se.mobileinteraction.plain"
+    const val applicationId = "com.mashan.fintax"
     const val compileSdk = 29
     const val minSdk = 23
     const val targetSdk = 29

@@ -2,10 +2,12 @@ package com.mashan.fintax.di
 
 import androidx.preference.PreferenceManager
 import com.mashan.fintax.BuildConfig
+import com.mashan.fintax.ui.salary.SalaryViewModel
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.CallAdapter
 import retrofit2.Converter
@@ -42,7 +44,7 @@ val appModule = module {
 
     single { Moshi.Builder().build() }
 
-//    viewModel { PhotoListViewModel(get()) }
+    viewModel { SalaryViewModel(get()) }
 
 
 }

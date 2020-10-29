@@ -26,7 +26,7 @@ class SplashFragment : Fragment(R.layout.splash_fragment) {
                 .scaleX(1.5f)
                 .scaleY(1.5f)
                 .setStartDelay(1000)
-                .setDuration(800)
+                .setDuration(1800)
 
                 .withEndAction {
                     navigateToDetails()
